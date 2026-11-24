@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#14181e">
+  <meta name="description" content="Tilt a six-sided maze cube and roll the steel ball to the green goal.">
+  <title>Maze Cube</title>
+  <link rel="icon" type="image/svg+xml" href="/axis.svg">
+</head>
+<body>
+  <main class="playfield" aria-label="Maze cube game">
+    <div id="surface" tabindex="0" role="application" aria-label="Roll the steel ball into the green ring. Drag or use the arrow keys to tilt. Right-drag or Shift-drag to orbit."></div>
+    <div class="guide-area">
+      <div class="control-guide" role="group" aria-label="Controls">
+        <div class="control"><i data-icon="rotate"></i><span>Rotate cube</span><kbd class="desktop">Left drag</kbd><kbd class="touch">1 finger</kbd></div>
+        <div class="control"><i data-icon="orbit"></i><span>Orbit camera</span><kbd class="desktop">Right drag</kbd><kbd class="touch">2 fingers</kbd></div>
+        <div class="control"><i data-icon="zoom"></i><span>Zoom</span><kbd class="desktop">Scroll</kbd><kbd class="touch">Pinch</kbd></div>
+      </div>
+      <div id="win" class="win-notice" role="status" hidden><i data-icon="check"></i>Maze solved!</div>
+    </div>
+    <div class="actions" role="group" aria-label="Maze actions">
+      <button id="new-maze" class="primary"><i data-icon="shuffle"></i>New maze</button>
+      <button id="restart"><i data-icon="restart"></i>Restart</button>
+    </div>
+    <div id="announcement" class="sr-only" aria-live="polite"></div>
+  </main>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
